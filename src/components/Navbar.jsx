@@ -6,7 +6,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center ">
       <div>
         <img src={Logo} alt="logo" className="md:w-[130px] w-[110px]" />
       </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
         <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain" onClick={() => setToggle(!toggle)}/>
         <div className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-28 right-0 left-0 mx-4 my-2 rounded-xl sidebar`}
+          } p-6 bg-black-gradient absolute z-40 top-28 right-0 left-0 mx-4 my-2 rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end flex-1 text-center flex-col">
             {navLinks.map((nav, index) => (
